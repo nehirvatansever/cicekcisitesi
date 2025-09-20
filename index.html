@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çiçekçi Dükkanı</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif; 
+            background-color: #f8f8f8; 
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            background-color: #d68c9a; 
+            height: 80px; 
+            margin-bottom: 30px;
+        }
+
+        .navbar .logo {
+            display: flex; 
+            align-items: center;
+            gap: 15px; 
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff; 
+        }
+
+        .navbar .logo img {
+            height: 50px; 
+        }
+
+        .navbar .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .navbar .menu a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s; 
+        }
+
+        .navbar .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.5); 
+        }
+
+        .product-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Ekranda her zaman 3 kart göster */
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+
+        .card .img-container {
+            border-radius: 10px;
+            overflow: hidden; /* Resim büyüdüğünde kartın dışına taşmasını engeller */
+            margin-bottom: 15px;
+            height: 350px; /* Resim alanının yüksekliğini artırarak daha dikey bir görünüm sağlar */
+        }
+
+        .card img {
+            width: 100%; 
+            height: 100%; /* Konteynerin tamamını doldurur */
+            object-fit: cover; 
+            transition: transform 0.4s ease; /* Büyüme efektini yumuşatır */
+        }
+
+        .card:hover img {
+            transform: scale(1.1); /* Kartın üzerine gelince resmi %10 büyütür */
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: #89687d; /* Rengi koyu pembe yap */
+        }
+
+        .card p {
+            color: #89687d; /* Rengi koyu pembe yap */
+            font-size: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #89687d; /* Rengi koyu pembe yap */
+            margin: 15px 0;
+        }
+
+        .card button {
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            background-color: #ff8c94; 
+            color: white;
+            font-weight: bold;
+            cursor: pointer; 
+        }
+
+        footer {
+            margin-top: 20px;
+            height: auto; 
+            padding: 20px;
+            background-color:#d68c9a; 
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logocicek.png" alt="Çiçek Logo">
+            <span>Nehir Çiçekçilik</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Ana Sayfa</a></li>
+            <li><a href="#">Çiçekler</a></li>
+            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section class="product-section">
+        <div class="card">
+            <div class="img-container"><img src="pembe-sakayik-buketi-1.jpg" alt="Şakayık"></div>
+            <h3>Gösterişli Şakayık</h3>
+            <p>Şakayık, büyük çiçekleri ve canlı renkleriyle baharın en sevilen simgelerindendir. Zarif görünümüyle süslemelere şıklık katar.</p>
+            
+            <div class="price">280 TL</div>
+            <button>Sepete Ekle</button>
+        </div>
+
+        <div class="card">
+            <div class="img-container"><img src="ZAMBAK.jpg" alt="Zambak"></div>
+            <h3>Beyaz Zambak</h3>
+<p>Beyaz zambak, saflığı ve zarafeti simgeleyen hoş kokulu bir çiçektir. Güzelliğiyle süslemelere zarif bir dokunuş katar.</p>
+
+            <div class="price">260 TL</div>
+            <button>Sepete Ekle</button>
+        </div>
+
+        <div class="card">
+            <div class="img-container"><img src="ORKİDE.webp" alt="Orkide"></div>
+            <h3>Asil Orkide</h3>
+<p>Orkide, narin yapısı ve zarif görünümüyle her ortama doğal bir şıklık kazandırır.</p>
+
+            <div class="price">450 TL</div>
+            <button>Sepete Ekle</button>
+        </div>
+
+        <div class="card">
+            <div class="img-container"><img src="GÜL BUKETİ.jpg" alt="Kırmızı Gül"></div>
+            <h3>Kırmızı Gül Buketi</h3>
+            <p>Kırmızı gül, aşkın ve tutkunun en özel simgesi olarak her zaman anlamlı bir hediyedir.</p>
+            
+            <div class="price">300 TL</div>
+            <button>Sepete Ekle</button>
+        </div>
+
+        <div class="card">
+            <div class="img-container"><img src="PAPATYA BUKET.jpg" alt="Papatya"></div>
+            <h3>Kır Papatyaları</h3>
+            <p>Papatyalar, baharın neşesini ve masumiyetini simgeleyen taptaze çiçeklerdir.</p>
+            
+            <div class="price">180 TL</div>
+            <button>Sepete Ekle</button>
+        </div>
+
+        <div class="card">
+            <div class="img-container"><img src="BEYAZLALE.jpg" alt="Lale"></div>
+            <h3>Rengarenk Laleler</h3>
+<p>Laleler, canlı renkleriyle baharın gelişini müjdeleyen neşeli çiçeklerdir.</p>
+
+            <div class="price">220 TL</div>
+            <button>Sepete Ekle</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nehir Çiçekçilik. Tüm hakları saklıdır.</p>
+        <p>Adres: Çiçek Sokak No:9999, Beşiktaş - İstanbul</p>
+        <p>Bize Ulaşın: <a href="mailto:info@nehiracicekcilik.com">info@nehircicekcilik.com</a></p>
+    </footer>
+</body>
+</html>
